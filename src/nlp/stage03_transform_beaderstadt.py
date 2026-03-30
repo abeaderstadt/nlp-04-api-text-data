@@ -76,11 +76,21 @@ def run_transform(
 
     df: pl.DataFrame = pl.DataFrame(records)
 
+    # ============================================================
+    # TECHNICAL MOD: define reusable text field (future-proofing)
+    # ============================================================
+
+    text = pl.col("body")  # <-- I'll change this later when dataset changes
+
     # Derived fields
     df = df.with_columns(
         [
             pl.col("title").str.len_chars().alias("title_length"),
             pl.col("body").str.len_chars().alias("body_length"),
+            # TECH MOD FEATURE: reusable text signal score
+            (text.str.len_chars() + text.str.count_matches(r"[.!?]")).alias(
+                "text_signal_score"
+            ),
         ]
     )
 
