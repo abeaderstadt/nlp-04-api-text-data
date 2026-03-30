@@ -80,7 +80,7 @@ def run_transform(
     # TECHNICAL MOD: define reusable text field (future-proofing)
     # ============================================================
 
-    text = pl.col("body")  # <-- I'll change this later when dataset changes
+    text = pl.col("body")  # <-- I'll change this later when my dataset changes
 
     # Derived fields
     df = df.with_columns(
