@@ -87,10 +87,8 @@ def run_transform(
         [
             pl.col("title").str.len_chars().alias("title_length"),
             pl.col("body").str.len_chars().alias("body_length"),
-            # TECH MOD FEATURE: reusable text signal score
-            (text.str.len_chars() + text.str.count_matches(r"[.!?]")).alias(
-                "text_signal_score"
-            ),
+            # TECH MOD FEATURE: total word count
+            text.str.split(" ").list.len().alias("word_count"),
         ]
     )
 
