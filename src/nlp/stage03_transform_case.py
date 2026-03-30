@@ -34,8 +34,10 @@ Then edit your copied Python file to:
 # ============================================================
 
 import logging
+import os
 from typing import Any
 
+os.environ["POLARS_SKIP_CPU_CHECK"] = "1"
 import polars as pl
 
 # ============================================================
