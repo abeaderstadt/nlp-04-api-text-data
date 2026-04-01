@@ -26,17 +26,20 @@ Then edit your copied Python file to change:
 - customize your output file name.
 """
 
+import os
 from pathlib import Path
 
 # ============================================================
 # API CONFIGURATION
 # ============================================================
 
-# TODO: In your custom app, change the URL to work with a different API that returns JSON data.
-API_URL: str = "https://jsonplaceholder.typicode.com/posts"
+API_KEY = os.getenv("NEWS_API_KEY")
 
-# TODO: In your custom app, change the header user-agent value
-# to something that represents your app or project.
+if not API_KEY:
+    raise ValueError("Please set your NEWS_API_KEY environment variable")
+
+API_URL: str = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
+
 HTTP_REQUEST_HEADERS: dict[str, str] = {
     "User-Agent": "nlp-module-4-beaderstadt/1.0",
     "Accept": "application/json",
@@ -51,7 +54,6 @@ DATA_PATH: Path = ROOT_PATH / "data"
 RAW_PATH: Path = DATA_PATH / "raw"
 PROCESSED_PATH: Path = DATA_PATH / "processed"
 
-# TODO: In your custom app, change the output file names from case_
-# to something that represents YOUR custom project.
+
 RAW_JSON_PATH: Path = RAW_PATH / "beaderstadt_raw.json"
 PROCESSED_CSV_PATH: Path = PROCESSED_PATH / "beaderstadt_processed.csv"

@@ -594,3 +594,138 @@ shape: (5, 7)
 2026-03-30 13:20:29 | INFO | CI | ========================
 2026-03-30 13:20:29 | INFO | CI | Pipeline executed successfully!
 2026-03-30 13:20:29 | INFO | CI | ========================
+2026-03-31 18:54:49 | INFO | CI | === RUN START ===
+2026-03-31 18:54:49 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-03-31 18:54:49 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-03-31 18:54:49 | INFO | CI | python=3.14.3
+2026-03-31 18:54:49 | INFO | CI | os=Windows 11
+2026-03-31 18:54:49 | INFO | CI | shell=powershell
+2026-03-31 18:54:49 | INFO | CI | cwd=.
+2026-03-31 18:54:49 | INFO | CI | github_actions=False
+2026-03-31 18:54:49 | INFO | CI | START PIPELINE
+2026-03-31 18:54:49 | INFO | CI | ROOT_PATH = .
+2026-03-31 18:54:49 | INFO | CI | DATA_PATH = data
+2026-03-31 18:54:49 | INFO | CI | RAW_PATH = data\raw
+2026-03-31 18:54:49 | INFO | CI | PROCESSED_PATH = data\processed
+2026-03-31 18:54:49 | INFO | CI | ========================
+2026-03-31 18:54:49 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 18:54:49 | INFO | CI | ========================
+2026-03-31 18:54:50 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
+2026-03-31 18:54:50 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
+2026-03-31 18:54:50 | INFO | CI | ========================
+2026-03-31 18:54:50 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-03-31 18:54:50 | INFO | CI | ========================
+2026-03-31 18:54:50 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-03-31 18:54:50 | INFO | CI | Top-level type: dict
+2026-03-31 19:06:30 | INFO | CI | === RUN START ===
+2026-03-31 19:06:30 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-03-31 19:06:30 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-03-31 19:06:30 | INFO | CI | python=3.14.3
+2026-03-31 19:06:30 | INFO | CI | os=Windows 11
+2026-03-31 19:06:30 | INFO | CI | shell=powershell
+2026-03-31 19:06:30 | INFO | CI | cwd=.
+2026-03-31 19:06:30 | INFO | CI | github_actions=False
+2026-03-31 19:06:30 | INFO | CI | START PIPELINE
+2026-03-31 19:06:30 | INFO | CI | ROOT_PATH = .
+2026-03-31 19:06:30 | INFO | CI | DATA_PATH = data
+2026-03-31 19:06:30 | INFO | CI | RAW_PATH = data\raw
+2026-03-31 19:06:30 | INFO | CI | PROCESSED_PATH = data\processed
+2026-03-31 19:06:30 | INFO | CI | ========================
+2026-03-31 19:06:30 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 19:06:30 | INFO | CI | ========================
+2026-03-31 19:06:30 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
+2026-03-31 19:06:30 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
+2026-03-31 19:06:30 | INFO | CI | ========================
+2026-03-31 19:06:30 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-03-31 19:06:30 | INFO | CI | ========================
+2026-03-31 19:06:30 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-03-31 19:06:30 | INFO | CI | Top-level type: dict
+2026-03-31 19:06:30 | INFO | CI | Top-level keys: ['status', 'totalResults', 'articles']
+2026-03-31 19:06:30 | INFO | CI | Extracted 'articles' from News API response.
+2026-03-31 19:06:30 | INFO | CI | Keys in first record: ['source', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content']
+2026-03-31 19:06:30 | INFO | CI | Field types:
+2026-03-31 19:06:30 | INFO | CI | source: dict
+2026-03-31 19:06:30 | INFO | CI | author: NoneType
+2026-03-31 19:06:30 | INFO | CI | title: str
+2026-03-31 19:06:30 | INFO | CI | description: str
+2026-03-31 19:06:30 | INFO | CI | url: str
+2026-03-31 19:06:30 | INFO | CI | urlToImage: str
+2026-03-31 19:06:30 | INFO | CI | publishedAt: str
+2026-03-31 19:06:30 | INFO | CI | content: str
+2026-03-31 19:06:30 | INFO | CI | Validation passed.
+2026-03-31 19:06:30 | INFO | CI | Sink: validated JSON object
+2026-03-31 19:06:30 | INFO | CI | ========================
+2026-03-31 19:06:30 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-03-31 19:06:30 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | === RUN START ===
+2026-03-31 19:10:38 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-03-31 19:10:38 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-03-31 19:10:38 | INFO | CI | python=3.14.3
+2026-03-31 19:10:38 | INFO | CI | os=Windows 11
+2026-03-31 19:10:38 | INFO | CI | shell=powershell
+2026-03-31 19:10:38 | INFO | CI | cwd=.
+2026-03-31 19:10:38 | INFO | CI | github_actions=False
+2026-03-31 19:10:38 | INFO | CI | START PIPELINE
+2026-03-31 19:10:38 | INFO | CI | ROOT_PATH = .
+2026-03-31 19:10:38 | INFO | CI | DATA_PATH = data
+2026-03-31 19:10:38 | INFO | CI | RAW_PATH = data\raw
+2026-03-31 19:10:38 | INFO | CI | PROCESSED_PATH = data\processed
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
+2026-03-31 19:10:38 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-03-31 19:10:38 | INFO | CI | Top-level type: dict
+2026-03-31 19:10:38 | INFO | CI | Top-level keys: ['status', 'totalResults', 'articles']
+2026-03-31 19:10:38 | INFO | CI | Extracted 'articles' from News API response.
+2026-03-31 19:10:38 | INFO | CI | Keys in first record: ['source', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content']
+2026-03-31 19:10:38 | INFO | CI | Field types:
+2026-03-31 19:10:38 | INFO | CI | source: dict
+2026-03-31 19:10:38 | INFO | CI | author: NoneType
+2026-03-31 19:10:38 | INFO | CI | title: str
+2026-03-31 19:10:38 | INFO | CI | description: str
+2026-03-31 19:10:38 | INFO | CI | url: str
+2026-03-31 19:10:38 | INFO | CI | urlToImage: str
+2026-03-31 19:10:38 | INFO | CI | publishedAt: str
+2026-03-31 19:10:38 | INFO | CI | content: str
+2026-03-31 19:10:38 | INFO | CI | Validation passed.
+2026-03-31 19:10:38 | INFO | CI | Sink: validated JSON object
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | Transformation complete.
+2026-03-31 19:10:38 | INFO | CI | DataFrame preview:
+shape: (5, 8)
+┌─────────────────┬─────────────────┬────────────────┬────────────────┬────────────┬──────────────┬────────────────┬────────────┐
+│ title           ┆ author          ┆ description    ┆ content        ┆ source     ┆ title_length ┆ content_length ┆ word_count │
+│ ---             ┆ ---             ┆ ---            ┆ ---            ┆ ---        ┆ ---          ┆ ---            ┆ ---        │
+│ str             ┆ str             ┆ str            ┆ str            ┆ str        ┆ u32          ┆ u32            ┆ u32        │
+╞═════════════════╪═════════════════╪════════════════╪════════════════╪════════════╪══════════════╪════════════════╪════════════╡
+│ Sources: Bulls  ┆ null            ┆ The Chicago    ┆ Mar 30, 2026,  ┆ ESPN       ┆ 62           ┆ 213            ┆ 36         │
+│ waive Jaden     ┆                 ┆ Bulls are      ┆ 05:49 PM ET   ┆            ┆              ┆                ┆            │
+│ Ive…            ┆                 ┆ waiving …      ┆ The…           ┆            ┆              ┆                ┆            │
+│ Outrage grows   ┆ Sammy Westfall, ┆ In a rare      ┆ JERUSALEM The  ┆ The        ┆ 97           ┆ 213            ┆ 38         │
+│ over Israeli    ┆ Anthony Faiola  ┆ about-face,    ┆ U.S.-Israeli   ┆ Washington ┆              ┆                ┆            │
+│ res…            ┆                 ┆ the move…      ┆ war…           ┆ Post       ┆              ┆                ┆            │
+│ Paul Schrader   ┆ Chris Gardner   ┆ The veteran    ┆ Mary Beth      ┆ Hollywood  ┆ 97           ┆ 214            ┆ 35         │
+│ Makes First     ┆                 ┆ filmmaker paid ┆ Hurt, the      ┆ Reporter   ┆              ┆                ┆            │
+│ Comm…           ┆                 ┆ tri…           ┆ Tony-nomin…    ┆            ┆              ┆                ┆            │
+│ Kathy Hochul is ┆ Nick Reisman    ┆ The Democratic ┆ Is what the    ┆ Politico   ┆ 80           ┆ 214            ┆ 39         │
+│ spending polit… ┆                 ┆ governor is at ┆ mayor is       ┆            ┆              ┆                ┆            │
+│                 ┆                 ┆ …              ┆ proposing…     ┆            ┆              ┆                ┆            │
+│ ‘Blue Blood’    ┆ Patrick         ┆ He was able to ┆ Alex Duong, a  ┆ AL.com     ┆ 48           ┆ 214            ┆ 33         │
+│ actor, comedian ┆ Darrington |    ┆ say goodbye to ┆ stand-up       ┆            ┆              ┆                ┆            │
+│ d…              ┆ pdarringt…      ┆ …              ┆ comedia…       ┆            ┆              ┆                ┆            │
+└─────────────────┴─────────────────┴────────────────┴────────────────┴────────────┴──────────────┴────────────────┴────────────┘
+2026-03-31 19:10:38 | INFO | CI | Sink: Polars DataFrame created
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | STAGE 04: LOAD starting...
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | SINK PATH = data\processed\beaderstadt_processed.csv
+2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:10:38 | INFO | CI | Pipeline executed successfully!
+2026-03-31 19:10:38 | INFO | CI | ========================

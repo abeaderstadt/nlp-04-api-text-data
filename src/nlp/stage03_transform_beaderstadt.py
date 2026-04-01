@@ -67,10 +67,11 @@ def run_transform(
     for record in json_data:
         records.append(
             {
-                "user_id": record["userId"],
-                "post_id": record["id"],
-                "title": record["title"],
-                "body": record["body"],
+                "title": record.get("title"),
+                "author": record.get("author"),
+                "description": record.get("description"),
+                "content": record.get("content"),
+                "source": record.get("source", {}).get("name"),
             }
         )
 
@@ -80,13 +81,13 @@ def run_transform(
     # TECHNICAL MOD: define reusable text field (future-proofing)
     # ============================================================
 
-    text = pl.col("body")  # <-- I'll change this later when my dataset changes
+    text = pl.col("content")  # <-- I'll change this later when my dataset changes
 
     # Derived fields
     df = df.with_columns(
         [
             pl.col("title").str.len_chars().alias("title_length"),
-            pl.col("body").str.len_chars().alias("body_length"),
+            pl.col("content").str.len_chars().alias("content_length"),
             # TECH MOD FEATURE: total word count
             text.str.split(" ").list.len().alias("word_count"),
         ]

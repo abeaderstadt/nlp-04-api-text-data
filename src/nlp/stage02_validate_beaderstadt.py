@@ -70,27 +70,42 @@ def run_validate(
     # and built-in variable __name__ to log just the type name.
     LOG.info(f"Top-level type: {type(json_data).__name__}")
 
-    if isinstance(json_data, list) and len(json_data) > 0:
-        first_record = json_data[0]
+    # ============================================================
+    # HANDLE NEWS API STRUCTURE
+    # ============================================================
 
-        LOG.info(f"Keys in first record: {list(first_record.keys())}")
+    if isinstance(json_data, dict):
+        LOG.info(f"Top-level keys: {list(json_data.keys())}")
 
-        LOG.info("Field types:")
-        for key, value in first_record.items():
-            LOG.info(f"{key}: {type(value).__name__}")
+        if "articles" in json_data:
+            json_data = json_data["articles"]
+            LOG.info("Extracted 'articles' from News API response.")
 
     # ============================================================
-    # VALIDATE EXPECTATIONS
+    # VALIDATE EXPECTATIONS (now with a list of articles)
     # ============================================================
 
     if not isinstance(json_data, list):
-        raise ValueError("Expected JSON data to be a list of records.")
+        raise ValueError(
+            "Expected JSON data to be a list of records after normalization."
+        )
 
     if len(json_data) == 0:
         raise ValueError("Expected at least one record.")
 
     if not all(isinstance(record, dict) for record in json_data):
         raise ValueError("Expected each record to be a dictionary.")
+
+    # ============================================================
+    # INSPECT FIRST RECORD
+    # ============================================================
+
+    first_record = json_data[0]
+    LOG.info(f"Keys in first record: {list(first_record.keys())}")
+
+    LOG.info("Field types:")
+    for key, value in first_record.items():
+        LOG.info(f"{key}: {type(value).__name__}")
 
     LOG.info("Validation passed.")
     LOG.info("Sink: validated JSON object")
