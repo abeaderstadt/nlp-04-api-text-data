@@ -81,15 +81,54 @@ def run_transform(
     # TECHNICAL MOD: define reusable text field (future-proofing)
     # ============================================================
 
-    text = pl.col("content")  # <-- I'll change this later when my dataset changes
+    # TECH MOD (Phase 4 legacy):
+    # text = pl.col("content")
+    # NOTE: Previously used as reusable reference for word_count,
+    # but replaced in Phase 5 by "content_clean" for improved data quality.
+
+    # First: clean content properly (so all later features use clean text)
+    df = df.with_columns(
+        [
+            pl.col("content")
+            .fill_null("")
+            .str.replace_all(r"\[\+\d+\schars\]", "")
+            .str.strip_chars()
+            .alias("content_clean")
+        ]
+    )
 
     # Derived fields
     df = df.with_columns(
         [
+            # ----------------------------
+            # Length metrics
+            # ----------------------------
             pl.col("title").str.len_chars().alias("title_length"),
-            pl.col("content").str.len_chars().alias("content_length"),
-            # TECH MOD FEATURE: total word count
-            text.str.split(" ").list.len().alias("word_count"),
+            pl.col("content_clean").str.len_chars().alias("content_length"),
+            # ----------------------------
+            # Word count
+            # ----------------------------
+            pl.col("content_clean")
+            .fill_null("")
+            .str.split(" ")
+            .list.len()
+            .alias("word_count"),
+            # ----------------------------
+            # has_author flag
+            # ----------------------------
+            pl.when(pl.col("author").is_not_null() & (pl.col("author") != ""))
+            .then(True)
+            .otherwise(False)
+            .alias("has_author"),
+            # ----------------------------
+            # Article length category
+            # ----------------------------
+            pl.when(pl.col("content_clean").str.len_chars() < 150)
+            .then(pl.lit("short"))
+            .when(pl.col("content_clean").str.len_chars() < 300)
+            .then(pl.lit("medium"))
+            .otherwise(pl.lit("long"))
+            .alias("article_length_category"),
         ]
     )
 

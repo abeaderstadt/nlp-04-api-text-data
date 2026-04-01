@@ -729,3 +729,152 @@ shape: (5, 8)
 2026-03-31 19:10:38 | INFO | CI | ========================
 2026-03-31 19:10:38 | INFO | CI | Pipeline executed successfully!
 2026-03-31 19:10:38 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | === RUN START ===
+2026-03-31 19:47:07 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-03-31 19:47:07 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-03-31 19:47:07 | INFO | CI | python=3.14.3
+2026-03-31 19:47:07 | INFO | CI | os=Windows 11
+2026-03-31 19:47:07 | INFO | CI | shell=powershell
+2026-03-31 19:47:07 | INFO | CI | cwd=.
+2026-03-31 19:47:07 | INFO | CI | github_actions=False
+2026-03-31 19:47:07 | INFO | CI | START PIPELINE
+2026-03-31 19:47:07 | INFO | CI | ROOT_PATH = .
+2026-03-31 19:47:07 | INFO | CI | DATA_PATH = data
+2026-03-31 19:47:07 | INFO | CI | RAW_PATH = data\raw
+2026-03-31 19:47:07 | INFO | CI | PROCESSED_PATH = data\processed
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
+2026-03-31 19:47:07 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-03-31 19:47:07 | INFO | CI | Top-level type: dict
+2026-03-31 19:47:07 | INFO | CI | Top-level keys: ['status', 'totalResults', 'articles']
+2026-03-31 19:47:07 | INFO | CI | Extracted 'articles' from News API response.
+2026-03-31 19:47:07 | INFO | CI | Keys in first record: ['source', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content']
+2026-03-31 19:47:07 | INFO | CI | Field types:
+2026-03-31 19:47:07 | INFO | CI | source: dict
+2026-03-31 19:47:07 | INFO | CI | author: NoneType
+2026-03-31 19:47:07 | INFO | CI | title: str
+2026-03-31 19:47:07 | INFO | CI | description: str
+2026-03-31 19:47:07 | INFO | CI | url: str
+2026-03-31 19:47:07 | INFO | CI | urlToImage: str
+2026-03-31 19:47:07 | INFO | CI | publishedAt: str
+2026-03-31 19:47:07 | INFO | CI | content: str
+2026-03-31 19:47:07 | INFO | CI | Validation passed.
+2026-03-31 19:47:07 | INFO | CI | Sink: validated JSON object
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | Transformation complete.
+2026-03-31 19:47:07 | INFO | CI | DataFrame preview:
+shape: (5, 10)
+┌────────────────┬────────────────┬───────────────┬───────────────┬───┬───────────────┬────────────┬────────────┬───────────────┐
+│ title          ┆ author         ┆ description   ┆ content       ┆ … ┆ content_lengt ┆ word_count ┆ has_author ┆ article_lengt │
+│ ---            ┆ ---            ┆ ---           ┆ ---           ┆   ┆ h             ┆ ---        ┆ ---        ┆ h_category    │
+│ str            ┆ str            ┆ str           ┆ str           ┆   ┆ ---           ┆ u32        ┆ bool       ┆ ---           │
+│                ┆                ┆               ┆               ┆   ┆ u32           ┆            ┆            ┆ str           │
+╞════════════════╪════════════════╪═══════════════╪═══════════════╪═══╪═══════════════╪════════════╪════════════╪═══════════════╡
+│ Sources: Bulls ┆ null           ┆ The Chicago   ┆ Mar 30, 2026, ┆ … ┆ 213           ┆ 36         ┆ false      ┆ medium        │
+│ waive Jaden    ┆                ┆ Bulls are     ┆ 05:49 PM ET  ┆   ┆               ┆            ┆            ┆               │
+│ Ive…           ┆                ┆ waiving …     ┆ The…          ┆   ┆               ┆            ┆            ┆               │
+│ Outrage grows  ┆ Sammy          ┆ In a rare     ┆ JERUSALEM The ┆ … ┆ 213           ┆ 38         ┆ true       ┆ medium        │
+│ over Israeli   ┆ Westfall,      ┆ about-face,   ┆ U.S.-Israeli  ┆   ┆               ┆            ┆            ┆               │
+│ res…           ┆ Anthony Faiola ┆ the move…     ┆ war…          ┆   ┆               ┆            ┆            ┆               │
+│ Paul Schrader  ┆ Chris Gardner  ┆ The veteran   ┆ Mary Beth     ┆ … ┆ 214           ┆ 35         ┆ true       ┆ medium        │
+│ Makes First    ┆                ┆ filmmaker     ┆ Hurt, the     ┆   ┆               ┆            ┆            ┆               │
+│ Comm…          ┆                ┆ paid tri…     ┆ Tony-nomin…   ┆   ┆               ┆            ┆            ┆               │
+│ Kathy Hochul   ┆ Nick Reisman   ┆ The           ┆ Is what the   ┆ … ┆ 214           ┆ 39         ┆ true       ┆ medium        │
+│ is spending    ┆                ┆ Democratic    ┆ mayor is      ┆   ┆               ┆            ┆            ┆               │
+│ polit…         ┆                ┆ governor is   ┆ proposing…    ┆   ┆               ┆            ┆            ┆               │
+│                ┆                ┆ at …          ┆               ┆   ┆               ┆            ┆            ┆               │
+│ ‘Blue Blood’   ┆ Patrick        ┆ He was able   ┆ Alex Duong, a ┆ … ┆ 214           ┆ 33         ┆ true       ┆ medium        │
+│ actor,         ┆ Darrington |   ┆ to say        ┆ stand-up      ┆   ┆               ┆            ┆            ┆               │
+│ comedian d…    ┆ pdarringt…     ┆ goodbye to …  ┆ comedia…      ┆   ┆               ┆            ┆            ┆               │
+└────────────────┴────────────────┴───────────────┴───────────────┴───┴───────────────┴────────────┴────────────┴───────────────┘
+2026-03-31 19:47:07 | INFO | CI | Sink: Polars DataFrame created
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | STAGE 04: LOAD starting...
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | SINK PATH = data\processed\beaderstadt_processed.csv
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 19:47:07 | INFO | CI | Pipeline executed successfully!
+2026-03-31 19:47:07 | INFO | CI | ========================
+2026-03-31 20:06:52 | INFO | CI | === RUN START ===
+2026-03-31 20:06:52 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-03-31 20:06:52 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-03-31 20:06:52 | INFO | CI | python=3.14.3
+2026-03-31 20:06:52 | INFO | CI | os=Windows 11
+2026-03-31 20:06:52 | INFO | CI | shell=powershell
+2026-03-31 20:06:52 | INFO | CI | cwd=.
+2026-03-31 20:06:52 | INFO | CI | github_actions=False
+2026-03-31 20:06:52 | INFO | CI | START PIPELINE
+2026-03-31 20:06:52 | INFO | CI | ROOT_PATH = .
+2026-03-31 20:06:52 | INFO | CI | DATA_PATH = data
+2026-03-31 20:06:52 | INFO | CI | RAW_PATH = data\raw
+2026-03-31 20:06:52 | INFO | CI | PROCESSED_PATH = data\processed
+2026-03-31 20:06:52 | INFO | CI | ========================
+2026-03-31 20:06:52 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 20:06:52 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
+2026-03-31 20:06:53 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
+2026-03-31 20:06:53 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-03-31 20:06:53 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-03-31 20:06:53 | INFO | CI | Top-level type: dict
+2026-03-31 20:06:53 | INFO | CI | Top-level keys: ['status', 'totalResults', 'articles']
+2026-03-31 20:06:53 | INFO | CI | Extracted 'articles' from News API response.
+2026-03-31 20:06:53 | INFO | CI | Keys in first record: ['source', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content']
+2026-03-31 20:06:53 | INFO | CI | Field types:
+2026-03-31 20:06:53 | INFO | CI | source: dict
+2026-03-31 20:06:53 | INFO | CI | author: str
+2026-03-31 20:06:53 | INFO | CI | title: str
+2026-03-31 20:06:53 | INFO | CI | description: str
+2026-03-31 20:06:53 | INFO | CI | url: str
+2026-03-31 20:06:53 | INFO | CI | urlToImage: str
+2026-03-31 20:06:53 | INFO | CI | publishedAt: str
+2026-03-31 20:06:53 | INFO | CI | content: str
+2026-03-31 20:06:53 | INFO | CI | Validation passed.
+2026-03-31 20:06:53 | INFO | CI | Sink: validated JSON object
+2026-03-31 20:06:53 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-03-31 20:06:53 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | Transformation complete.
+2026-03-31 20:06:53 | INFO | CI | DataFrame preview:
+shape: (5, 11)
+┌────────────────┬────────────────┬───────────────┬───────────────┬───┬───────────────┬────────────┬────────────┬───────────────┐
+│ title          ┆ author         ┆ description   ┆ content       ┆ … ┆ content_lengt ┆ word_count ┆ has_author ┆ article_lengt │
+│ ---            ┆ ---            ┆ ---           ┆ ---           ┆   ┆ h             ┆ ---        ┆ ---        ┆ h_category    │
+│ str            ┆ str            ┆ str           ┆ str           ┆   ┆ ---           ┆ u32        ┆ bool       ┆ ---           │
+│                ┆                ┆               ┆               ┆   ┆ u32           ┆            ┆            ┆ str           │
+╞════════════════╪════════════════╪═══════════════╪═══════════════╪═══╪═══════════════╪════════════╪════════════╪═══════════════╡
+│ Mary Beth      ┆ Harrison Smith ┆ She appeared  ┆ Mary Beth     ┆ … ┆ 200           ┆ 30         ┆ true       ┆ medium        │
+│ Hurt,          ┆                ┆ in several    ┆ Hurt, a stage ┆   ┆               ┆            ┆            ┆               │
+│ versatile      ┆                ┆ movies…       ┆ and sc…       ┆   ┆               ┆            ┆            ┆               │
+│ actr…          ┆                ┆               ┆               ┆   ┆               ┆            ┆            ┆               │
+│ DeSantis signs ┆ Grace          ┆ A bill to     ┆ TALAHASSEE,   ┆ … ┆ 200           ┆ 32         ┆ true       ┆ medium        │
+│ bill renaming  ┆ Bellinghausen  ┆ rename Palm   ┆ Fla. (CBS12)  ┆   ┆               ┆            ┆            ┆               │
+│ P…             ┆ | Gershon …    ┆ Beach In…     ┆ A bil…        ┆   ┆               ┆            ┆            ┆               │
+│ Bulls waive    ┆ Joe Cowley     ┆ Since being   ┆ SAN ANTONIO   ┆ … ┆ 200           ┆ 38         ┆ true       ┆ medium        │
+│ Jaden Ivey     ┆                ┆ acquired from ┆ The Bulls     ┆   ┆               ┆            ┆            ┆               │
+│ after h…       ┆                ┆ the …         ┆ wanted t…     ┆   ┆               ┆            ┆            ┆               │
+│ Iran's strike  ┆ NPR Staff      ┆ NPR has       ┆ NPR has       ┆ … ┆ 200           ┆ 35         ┆ true       ┆ medium        │
+│ wounded over a ┆                ┆ confirmed     ┆ confirmed     ┆   ┆               ┆            ┆            ┆               │
+│ d…             ┆                ┆ that at leas… ┆ more than a … ┆   ┆               ┆            ┆            ┆               │
+│ Live updates:  ┆ null           ┆ NASA is       ┆ As the        ┆ … ┆ 200           ┆ 36         ┆ false      ┆ medium        │
+│ Artemis II     ┆                ┆ targeting an  ┆ countdown     ┆   ┆               ┆            ┆            ┆               │
+│ count…         ┆                ┆ April 1 l…    ┆ clock begins  ┆   ┆               ┆            ┆            ┆               │
+│                ┆                ┆               ┆ …             ┆   ┆               ┆            ┆            ┆               │
+└────────────────┴────────────────┴───────────────┴───────────────┴───┴───────────────┴────────────┴────────────┴───────────────┘
+2026-03-31 20:06:53 | INFO | CI | Sink: Polars DataFrame created
+2026-03-31 20:06:53 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | STAGE 04: LOAD starting...
+2026-03-31 20:06:53 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | SINK PATH = data\processed\beaderstadt_processed.csv
+2026-03-31 20:06:53 | INFO | CI | ========================
+2026-03-31 20:06:53 | INFO | CI | Pipeline executed successfully!
+2026-03-31 20:06:53 | INFO | CI | ========================
