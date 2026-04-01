@@ -147,25 +147,25 @@ To make this project my own, I extended the example ETL pipeline to work with a 
 1. I added a new feature called word_count in the Transform stage of the pipeline.
 2. It takes the body (or content field), splits it into words, and counts how many words are in each post.
 3. Observations:
-  - Posts with a character length around ~180-200 usually had word counts in the mid-teens to high twenties.
-  - There is a pretty consistent relationship between how long something looks and how much it actually says.
-  - character count = raw size of the text.
-  - word_count = more “human” sense of information content.
-  - Adding word_count makes it much easier to compare posts in a more meaningful way instead of just looking at raw text length.
+     - Posts with a character length around ~180-200 usually had word counts in the mid-teens to high twenties.
+     - There is a pretty consistent relationship between how long something looks and how much it actually says.
+     - character count = raw size of the text.
+     - word_count = more “human” sense of information content.
+     - Adding word_count makes it much easier to compare posts in a more meaningful way instead of just looking at raw text length.
 
 **Phase 5: Apply the Skills to a New Problem**
 1. Refactored the pipeline so it works cleanly with new live API data (NewsAPI instead of example data).
 2. Updated the validation stage to handle real-world JSON structure (nested articles field).
 3. Strengthened the pipeline structure so each stage has a clear job:
-  - Extract = get raw data
-  - Validate = clean + inspect structure
-  - Transform = feature engineering
-  - Load = save final dataset
+     - Extract = get raw data
+     - Validate = clean + inspect structure
+     - Transform = feature engineering
+     - Load = save final dataset
 4. Confirmed the full pipeline runs end-to-end and outputs a clean CSV file in data/processed/.
 5. Observations:
-  - This pipeline now feels like a real ETL system not just a script. Each step depends on the previous one in a clean, predictable way.
-  -
-  -
+     - This pipeline now feels like a real ETL system not just a script. Each step depends on the previous one in a clean, predictable way.
+     -
+     -
 
 **Dataset Source**
 1. Get a free API key from https://newsapi.org
