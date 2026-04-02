@@ -1,6 +1,5 @@
 """
-stage03_transform_case.py
-(EDIT YOUR COPY OF THIS FILE)
+(MY EDITED COPY OF THIS FILE)
 
 Source: validated JSON object
 Sink: Polars DataFrame
