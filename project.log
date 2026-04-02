@@ -875,3 +875,77 @@ shape: (5, 11)
 2026-03-31 20:06:53 | INFO | CI | ========================
 2026-03-31 20:06:53 | INFO | CI | Pipeline executed successfully!
 2026-03-31 20:06:53 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | === RUN START ===
+2026-04-02 17:59:36 | INFO | CI | project=MODULE 4: EVTL PIPELINE
+2026-04-02 17:59:36 | INFO | CI | repo_dir=nlp-04-api-text-data
+2026-04-02 17:59:36 | INFO | CI | python=3.14.3
+2026-04-02 17:59:36 | INFO | CI | os=Windows 11
+2026-04-02 17:59:36 | INFO | CI | shell=powershell
+2026-04-02 17:59:36 | INFO | CI | cwd=.
+2026-04-02 17:59:36 | INFO | CI | github_actions=False
+2026-04-02 17:59:36 | INFO | CI | START PIPELINE
+2026-04-02 17:59:36 | INFO | CI | ROOT_PATH = .
+2026-04-02 17:59:36 | INFO | CI | DATA_PATH = data
+2026-04-02 17:59:36 | INFO | CI | RAW_PATH = data\raw
+2026-04-02 17:59:36 | INFO | CI | PROCESSED_PATH = data\processed
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
+2026-04-02 17:59:36 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | JSON STRUCTURE INSPECTION:
+2026-04-02 17:59:36 | INFO | CI | Top-level type: dict
+2026-04-02 17:59:36 | INFO | CI | Top-level keys: ['status', 'totalResults', 'articles']
+2026-04-02 17:59:36 | INFO | CI | Extracted 'articles' from News API response.
+2026-04-02 17:59:36 | INFO | CI | Keys in first record: ['source', 'author', 'title', 'description', 'url', 'urlToImage', 'publishedAt', 'content']
+2026-04-02 17:59:36 | INFO | CI | Field types:
+2026-04-02 17:59:36 | INFO | CI | source: dict
+2026-04-02 17:59:36 | INFO | CI | author: str
+2026-04-02 17:59:36 | INFO | CI | title: str
+2026-04-02 17:59:36 | INFO | CI | description: str
+2026-04-02 17:59:36 | INFO | CI | url: str
+2026-04-02 17:59:36 | INFO | CI | urlToImage: str
+2026-04-02 17:59:36 | INFO | CI | publishedAt: str
+2026-04-02 17:59:36 | INFO | CI | content: str
+2026-04-02 17:59:36 | INFO | CI | Validation passed.
+2026-04-02 17:59:36 | INFO | CI | Sink: validated JSON object
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | Transformation complete.
+2026-04-02 17:59:36 | INFO | CI | DataFrame preview:
+shape: (5, 11)
+┌───────────────┬───────────────┬──────────────┬──────────────┬───┬──────────────┬────────────┬────────────┬──────────────┐
+│ title         ┆ author        ┆ description  ┆ content      ┆ … ┆ content_leng ┆ word_count ┆ has_author ┆ article_leng │
+│ ---           ┆ ---           ┆ ---          ┆ ---          ┆   ┆ th           ┆ ---        ┆ ---        ┆ th_category  │
+│ str           ┆ str           ┆ str          ┆ str          ┆   ┆ ---          ┆ u32        ┆ bool       ┆ ---          │
+│               ┆               ┆              ┆              ┆   ┆ u32          ┆            ┆            ┆ str          │
+╞═══════════════╪═══════════════╪══════════════╪══════════════╪═══╪══════════════╪════════════╪════════════╪══════════════╡
+│ Supreme Court ┆ Rebecca       ┆ Even Trump's ┆ The latest:  ┆ … ┆ 200          ┆ 27         ┆ true       ┆ medium       │
+│ casts doubt   ┆ Falconer,     ┆ unprecedente ┆ A majority   ┆   ┆              ┆            ┆            ┆              │
+│ on T…         ┆ Andrew Panta… ┆ d cou…       ┆ of just…     ┆   ┆              ┆            ┆            ┆              │
+│ More than a   ┆ Maia Pandey,  ┆ The          ┆ Winter isn't ┆ … ┆ 200          ┆ 32         ┆ true       ┆ medium       │
+│ dozen         ┆ Steven        ┆ warnings,    ┆ quite        ┆   ┆              ┆            ┆            ┆              │
+│ Wisconsin co… ┆ Martinez      ┆ which were   ┆ through wit… ┆   ┆              ┆            ┆            ┆              │
+│               ┆               ┆ issue…       ┆              ┆   ┆              ┆            ┆            ┆              │
+│ Tiger Woods’  ┆ Jessica       ┆ The latest   ┆ Tiger Woods' ┆ … ┆ 200          ┆ 33         ┆ true       ┆ medium       │
+│ future in     ┆ Golden        ┆ developments ┆ future in    ┆   ┆              ┆            ┆            ┆              │
+│ golf is…      ┆               ┆ leave …      ┆ profess…     ┆   ┆              ┆            ┆            ┆              │
+│ Italy miss    ┆ null          ┆ null         ┆ null         ┆ … ┆ 0            ┆ 1          ┆ false      ┆ short        │
+│ out on        ┆               ┆              ┆              ┆   ┆              ┆            ┆            ┆              │
+│ third-straig… ┆               ┆              ┆              ┆   ┆              ┆            ┆            ┆              │
+│ Ex-Fleetwood  ┆ Dennis Broad, ┆ Lindsey      ┆ Guitarist    ┆ … ┆ 200          ┆ 33         ┆ true       ┆ medium       │
+│ Mac member    ┆ NBC Los       ┆ Buckingham,  ┆ and vocalist ┆   ┆              ┆            ┆            ┆              │
+│ Lindse…       ┆ Angeles,…     ┆ a former m…  ┆ Lindsey…     ┆   ┆              ┆            ┆            ┆              │
+└───────────────┴───────────────┴──────────────┴──────────────┴───┴──────────────┴────────────┴────────────┴──────────────┘
+2026-04-02 17:59:36 | INFO | CI | Sink: Polars DataFrame created
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | STAGE 04: LOAD starting...
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | SINK PATH = data\processed\beaderstadt_processed.csv
+2026-04-02 17:59:36 | INFO | CI | ========================
+2026-04-02 17:59:36 | INFO | CI | Pipeline executed successfully!
+2026-04-02 17:59:36 | INFO | CI | ========================
