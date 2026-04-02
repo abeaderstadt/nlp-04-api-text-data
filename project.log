@@ -12,7 +12,7 @@
 2026-03-30 10:07:53 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 10:07:53 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 10:07:53 | INFO | CI | ========================
-2026-03-30 10:07:53 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 10:07:53 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 10:07:53 | INFO | CI | ========================
 2026-03-30 10:07:53 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 10:07:53 | INFO | CI | SINK PATH = data\raw\case_raw.json
@@ -71,7 +71,7 @@ shape: (5, 6)
 2026-03-30 11:13:05 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 11:13:05 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 11:13:05 | INFO | CI | ========================
-2026-03-30 11:13:05 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 11:13:05 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 11:13:05 | INFO | CI | ========================
 2026-03-30 11:13:06 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 11:13:06 | INFO | CI | SINK PATH = data\raw\case_raw.json
@@ -130,7 +130,7 @@ shape: (5, 6)
 2026-03-30 11:40:04 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 11:40:04 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 11:40:04 | INFO | CI | ========================
-2026-03-30 11:40:04 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 11:40:04 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 11:40:04 | INFO | CI | ========================
 2026-03-30 11:40:04 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 11:40:04 | INFO | CI | SINK PATH = data\raw\case_raw.json
@@ -189,7 +189,7 @@ shape: (5, 6)
 2026-03-30 11:43:09 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 11:43:09 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 11:43:09 | INFO | CI | ========================
-2026-03-30 11:43:09 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 11:43:09 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 11:43:09 | INFO | CI | ========================
 2026-03-30 11:43:09 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 11:43:09 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
@@ -248,7 +248,7 @@ shape: (5, 6)
 2026-03-30 11:45:40 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 11:45:40 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 11:45:40 | INFO | CI | ========================
-2026-03-30 11:45:40 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 11:45:40 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 11:45:40 | INFO | CI | ========================
 2026-03-30 11:45:40 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 11:45:40 | INFO | CI | SINK PATH = data\raw\case_raw.json
@@ -307,7 +307,7 @@ shape: (5, 6)
 2026-03-30 11:46:05 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 11:46:05 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 11:46:05 | INFO | CI | ========================
-2026-03-30 11:46:05 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 11:46:05 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 11:46:05 | INFO | CI | ========================
 2026-03-30 11:46:05 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 11:46:05 | INFO | CI | SINK PATH = data\raw\case_raw.json
@@ -366,7 +366,7 @@ shape: (5, 6)
 2026-03-30 12:32:28 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 12:32:28 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 12:32:28 | INFO | CI | ========================
-2026-03-30 12:32:28 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 12:32:28 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 12:32:28 | INFO | CI | ========================
 2026-03-30 12:32:28 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 12:32:28 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
@@ -425,7 +425,7 @@ shape: (5, 6)
 2026-03-30 12:39:11 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 12:39:11 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 12:39:11 | INFO | CI | ========================
-2026-03-30 12:39:11 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 12:39:11 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 12:39:11 | INFO | CI | ========================
 2026-03-30 12:39:11 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 12:39:11 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
@@ -486,7 +486,7 @@ shape: (5, 7)
 2026-03-30 12:59:47 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 12:59:47 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 12:59:47 | INFO | CI | ========================
-2026-03-30 12:59:47 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 12:59:47 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 12:59:47 | INFO | CI | ========================
 2026-03-30 12:59:47 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 12:59:47 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
@@ -547,7 +547,7 @@ shape: (5, 7)
 2026-03-30 13:20:29 | INFO | CI | RAW_PATH = data\raw
 2026-03-30 13:20:29 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-30 13:20:29 | INFO | CI | ========================
-2026-03-30 13:20:29 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-30 13:20:29 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-30 13:20:29 | INFO | CI | ========================
 2026-03-30 13:20:29 | INFO | CI | SOURCE PATH = https://jsonplaceholder.typicode.com/posts
 2026-03-30 13:20:29 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
@@ -608,9 +608,8 @@ shape: (5, 7)
 2026-03-31 18:54:49 | INFO | CI | RAW_PATH = data\raw
 2026-03-31 18:54:49 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-31 18:54:49 | INFO | CI | ========================
-2026-03-31 18:54:49 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 18:54:49 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-31 18:54:49 | INFO | CI | ========================
-2026-03-31 18:54:50 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
 2026-03-31 18:54:50 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
 2026-03-31 18:54:50 | INFO | CI | ========================
 2026-03-31 18:54:50 | INFO | CI | STAGE 02: VALIDATE starting...
@@ -631,9 +630,8 @@ shape: (5, 7)
 2026-03-31 19:06:30 | INFO | CI | RAW_PATH = data\raw
 2026-03-31 19:06:30 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-31 19:06:30 | INFO | CI | ========================
-2026-03-31 19:06:30 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 19:06:30 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-31 19:06:30 | INFO | CI | ========================
-2026-03-31 19:06:30 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
 2026-03-31 19:06:30 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
 2026-03-31 19:06:30 | INFO | CI | ========================
 2026-03-31 19:06:30 | INFO | CI | STAGE 02: VALIDATE starting...
@@ -671,9 +669,8 @@ shape: (5, 7)
 2026-03-31 19:10:38 | INFO | CI | RAW_PATH = data\raw
 2026-03-31 19:10:38 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-31 19:10:38 | INFO | CI | ========================
-2026-03-31 19:10:38 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 19:10:38 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-31 19:10:38 | INFO | CI | ========================
-2026-03-31 19:10:38 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
 2026-03-31 19:10:38 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
 2026-03-31 19:10:38 | INFO | CI | ========================
 2026-03-31 19:10:38 | INFO | CI | STAGE 02: VALIDATE starting...
@@ -706,7 +703,8 @@ shape: (5, 8)
 │ str             ┆ str             ┆ str            ┆ str            ┆ str        ┆ u32          ┆ u32            ┆ u32        │
 ╞═════════════════╪═════════════════╪════════════════╪════════════════╪════════════╪══════════════╪════════════════╪════════════╡
 │ Sources: Bulls  ┆ null            ┆ The Chicago    ┆ Mar 30, 2026,  ┆ ESPN       ┆ 62           ┆ 213            ┆ 36         │
-│ waive Jaden     ┆                 ┆ Bulls are      ┆ 05:49 PM ET   ┆            ┆              ┆                ┆            │
+│ waive Jaden     ┆                 ┆ Bulls are      ┆ 05:49 PM ET
+   ┆            ┆              ┆                ┆            │
 │ Ive…            ┆                 ┆ waiving …      ┆ The…           ┆            ┆              ┆                ┆            │
 │ Outrage grows   ┆ Sammy Westfall, ┆ In a rare      ┆ JERUSALEM The  ┆ The        ┆ 97           ┆ 213            ┆ 38         │
 │ over Israeli    ┆ Anthony Faiola  ┆ about-face,    ┆ U.S.-Israeli   ┆ Washington ┆              ┆                ┆            │
@@ -743,9 +741,8 @@ shape: (5, 8)
 2026-03-31 19:47:07 | INFO | CI | RAW_PATH = data\raw
 2026-03-31 19:47:07 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-31 19:47:07 | INFO | CI | ========================
-2026-03-31 19:47:07 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 19:47:07 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-31 19:47:07 | INFO | CI | ========================
-2026-03-31 19:47:07 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
 2026-03-31 19:47:07 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
 2026-03-31 19:47:07 | INFO | CI | ========================
 2026-03-31 19:47:07 | INFO | CI | STAGE 02: VALIDATE starting...
@@ -779,7 +776,8 @@ shape: (5, 10)
 │                ┆                ┆               ┆               ┆   ┆ u32           ┆            ┆            ┆ str           │
 ╞════════════════╪════════════════╪═══════════════╪═══════════════╪═══╪═══════════════╪════════════╪════════════╪═══════════════╡
 │ Sources: Bulls ┆ null           ┆ The Chicago   ┆ Mar 30, 2026, ┆ … ┆ 213           ┆ 36         ┆ false      ┆ medium        │
-│ waive Jaden    ┆                ┆ Bulls are     ┆ 05:49 PM ET  ┆   ┆               ┆            ┆            ┆               │
+│ waive Jaden    ┆                ┆ Bulls are     ┆ 05:49 PM ET
+  ┆   ┆               ┆            ┆            ┆               │
 │ Ive…           ┆                ┆ waiving …     ┆ The…          ┆   ┆               ┆            ┆            ┆               │
 │ Outrage grows  ┆ Sammy          ┆ In a rare     ┆ JERUSALEM The ┆ … ┆ 213           ┆ 38         ┆ true       ┆ medium        │
 │ over Israeli   ┆ Westfall,      ┆ about-face,   ┆ U.S.-Israeli  ┆   ┆               ┆            ┆            ┆               │
@@ -817,9 +815,8 @@ shape: (5, 10)
 2026-03-31 20:06:52 | INFO | CI | RAW_PATH = data\raw
 2026-03-31 20:06:52 | INFO | CI | PROCESSED_PATH = data\processed
 2026-03-31 20:06:52 | INFO | CI | ========================
-2026-03-31 20:06:52 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-03-31 20:06:52 | INFO | CI | STAGE 01: EXTRACT starting...
 2026-03-31 20:06:52 | INFO | CI | ========================
-2026-03-31 20:06:53 | INFO | CI | SOURCE PATH = https://newsapi.org/v2/top-headlines?country=us&apiKey=ed2350ad65ac413c9c31489b5394c822
 2026-03-31 20:06:53 | INFO | CI | SINK PATH = data\raw\beaderstadt_raw.json
 2026-03-31 20:06:53 | INFO | CI | ========================
 2026-03-31 20:06:53 | INFO | CI | STAGE 02: VALIDATE starting...
